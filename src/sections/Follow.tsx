@@ -7,7 +7,7 @@ export function Follow() {
     <section className="follow section" id="follow">
       <div className="follow-inner">
         <div className="follow-image">
-          <img src="/img/okan-family.png" alt="仲良く写真を撮るオカン。とムスコ" width="1280" height="1280" />
+          <img src="/img/okan-family.webp" alt="仲良く写真を撮るオカン。とムスコ" width="1000" height="1000" />
           <span>見るだけでも<br />大歓迎です！</span>
         </div>
         <div className="follow-copy">

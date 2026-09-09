@@ -2,7 +2,7 @@ export function Header() {
   return (
     <header className="topbar">
       <a className="logo" href="#top">
-        <img src="/img/okan-camera.png" alt="" />
+        <img src="/img/okan-logo.webp" alt="" />
         <b>オカン。</b>
         <span>家族の思い出作品室</span>
       </a>

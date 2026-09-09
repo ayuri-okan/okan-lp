@@ -28,7 +28,7 @@ export function Hero() {
       </div>
       <div className="hero-image">
         <div className="speech">今日もええ写真、<br />撮ろう！</div>
-        <img src="/img/okan-family.png" alt="カメラを持ったオカン。と笑顔のムスコ" width="1280" height="1280" />
+        <img src="/img/okan-family.webp" alt="カメラを持ったオカン。と笑顔のムスコ" width="1000" height="1000" />
       </div>
       <div className="polaroids">
         {polaroids.map(([emoji, label]) => (

@@ -6,7 +6,7 @@ export function Present() {
   return (
     <section className="present section" id="present">
       <div className="present-art">
-        <img src="/img/okan-camera.png" alt="カメラを持って写真を撮るオカン。" width="1280" height="1280" />
+        <img src="/img/okan-camera.webp" alt="カメラを持って写真を撮るオカン。" width="1000" height="1000" />
         <span className="choose-badge">好きな1つを<br /><b>選べる！</b></span>
       </div>
       <div className="present-copy">
