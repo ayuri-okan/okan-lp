@@ -4,3 +4,5 @@ dist
 .DS_Store
 shots
 .claude/settings.local.json
+vite.config.js
+vite.config.d.ts
