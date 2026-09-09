@@ -84,3 +84,7 @@
 
 /* スパム対策のハニーポット（人間には見せない） */
 .honeypot{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none}
+
+/* LINEを使っていない人向けの、フォームへの逃げ道リンク */
+.flow-fallback{display:block;margin-top:16px;text-align:center;font-size:13px;font-weight:700;color:var(--muted);text-underline-offset:4px}
+.flow-fallback:hover{color:var(--orange)}

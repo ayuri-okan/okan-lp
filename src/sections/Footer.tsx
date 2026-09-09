@@ -1,5 +1,5 @@
-import { instagramHandle, instagramUrl } from '../data'
-import { InstagramIcon, Send } from '../lib/icons'
+import { instagramHandle, instagramUrl, lineUrl } from '../data'
+import { InstagramIcon, MessageCircle, Send } from '../lib/icons'
 
 export function Footer() {
   return (
@@ -16,7 +16,9 @@ export function MobileBar() {
   return (
     <div className="mobile-bar">
       <a href={instagramUrl} target="_blank" rel="noopener noreferrer"><InstagramIcon />フォロー</a>
-      <a href="#apply"><Send />応募する</a>
+      {lineUrl
+        ? <a href={lineUrl} target="_blank" rel="noopener noreferrer"><MessageCircle />LINE追加</a>
+        : <a href="#apply"><Send />応募する</a>}
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import { faqs } from '../data'
+import { faqs, lineUrl } from '../data'
 import { ApplyButton } from '../components/Buttons'
 import { MessageCircle } from '../lib/icons'
 
@@ -19,7 +19,9 @@ export function Faq() {
         <MessageCircle />
         <div>
           <b>まだ少し気になることがありますか？</b>
-          <p>応募フォームの「ひとこと」欄に「これでも作れる？」と気軽に書いてください。</p>
+          <p>{lineUrl
+            ? 'LINEで「これでも作れる？」と気軽に聞いてください。'
+            : '応募フォームの「ひとこと」欄に「これでも作れる？」と気軽に書いてください。'}</p>
         </div>
         <ApplyButton />
       </div>

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import type { FormEvent } from 'react'
-import { gifts, formAccessKey, formEndpoint, formSubjectPrefix, instagramUrl, type GiftKey } from '../data'
+import { gifts, formAccessKey, formEndpoint, formSubjectPrefix, instagramUrl, lineUrl, type GiftKey } from '../data'
 import { CheckCircle2, Gift, InstagramIcon, Send, Sparkles } from '../lib/icons'
 
 type Status = 'idle' | 'sending' | 'done' | 'error'
@@ -81,8 +81,20 @@ export function Apply() {
     <section className="apply section" id="apply">
       <div className="apply-head">
         <div className="campaign-pill"><Gift />応募者全員・費用0円</div>
-        <h2>無料プレゼントに<br /><em>応募する</em></h2>
-        <p className="lead">入力は1分ほど。写真は応募後のご案内にそって送っていただきます。</p>
+        {lineUrl ? (
+          <>
+            <h2>LINEを使っていない方は<br /><em>こちらから</em></h2>
+            <p className="lead">
+              ふだんLINEを使わない方のための応募フォームです。入力は1分ほど。<br />
+              写真は応募後にメールでご案内する送り方にそって送っていただきます。
+            </p>
+          </>
+        ) : (
+          <>
+            <h2>無料プレゼントに<br /><em>応募する</em></h2>
+            <p className="lead">入力は1分ほど。写真は応募後のご案内にそって送っていただきます。</p>
+          </>
+        )}
       </div>
 
       <form className="apply-form" onSubmit={handleSubmit} noValidate={false}>

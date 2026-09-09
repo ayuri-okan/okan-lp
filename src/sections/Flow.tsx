@@ -1,4 +1,4 @@
-import { flow } from '../data'
+import { flow, formFallbackNote, lineUrl } from '../data'
 import { ApplyButton, InstaButton } from '../components/Buttons'
 import { Camera, Gift, InstagramIcon, Send, Sparkles } from '../lib/icons'
 
@@ -29,6 +29,7 @@ export function Flow() {
           無料だけのご応募も大歓迎です。
         </p>
         <div><InstaButton /><ApplyButton /></div>
+        {lineUrl && <a className="flow-fallback" href="#apply">{formFallbackNote}</a>}
       </div>
     </section>
   )
