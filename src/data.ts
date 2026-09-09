@@ -28,7 +28,7 @@ export const lineUrl: string | null = null
  *
  * null のあいだは送信せず、InstagramのDMへご案内する。
  */
-export const formAccessKey: string | null = null
+export const formAccessKey: string | null = 'cf5b3631-19f3-4643-9458-52c60f843755'
 
 /** Web3Forms の受付エンドポイント（変更不要） */
 export const formEndpoint = 'https://api.web3forms.com/submit'
