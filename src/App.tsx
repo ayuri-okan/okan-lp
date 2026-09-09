@@ -1,6 +1,7 @@
 import { Header } from './sections/Header'
 import { Hero } from './sections/Hero'
 import { Memory } from './sections/Memory'
+import { Manga } from './sections/Manga'
 import { Works } from './sections/Works'
 import { Present } from './sections/Present'
 import { Flow } from './sections/Flow'
@@ -18,6 +19,7 @@ export default function App() {
       <main id="main-content">
         <Hero />
         <Memory />
+        <Manga />
         <Works />
         <Present />
         <Flow />

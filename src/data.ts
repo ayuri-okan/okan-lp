@@ -88,6 +88,19 @@ export const moments: string[] = [
   '毎朝の謎ルーティン', '兄弟ゲンカ', '言い間違い', 'ごはん中に寝た日', '何気ない日常',
 ]
 
+/* ---------- 販促漫画 ---------- */
+
+export type MangaPage = { no: number; src: string; alt: string }
+
+/** LP に埋め込む販促漫画。pages/ の生成物を public/manga/ に置いて参照する */
+export const mangaPages: MangaPage[] = [
+  { no: 1, src: '/manga/page01.webp', alt: 'スマホの写真一覧がびっしり並び、オカン。が「最後に見返したん いつ」と問いかける' },
+  { no: 2, src: '/manga/page02.webp', alt: '写真がフォルダの奥へ沈んでいく。オカン。が「写真はこっちから見に行かんと、あの日の子には会えへんねん」と話す' },
+  { no: 3, src: '/manga/page03.webp', alt: '写真1枚がLINEスタンプ・イラスト・漫画・絵本の4つに変わる図解に、ムスコが驚く' },
+  { no: 4, src: '/manga/page04.webp', alt: '朝のトークに送られた似顔絵、夜は自分が主人公の絵本。オカン。が「あなたの子にも毎日会えるで」と笑う' },
+  { no: 5, src: '/manga/page05.webp', alt: 'オカン。とムスコが下を指さし、緑の立て札に「LINEで まってるで」。ムスコが「ここ おしてやー」と言う' },
+]
+
 export type Faq = { q: string; a: string }
 
 export const faqs: Faq[] = [

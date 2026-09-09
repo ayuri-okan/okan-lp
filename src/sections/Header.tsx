@@ -8,6 +8,7 @@ export function Header() {
       </a>
       <nav aria-label="主要リンク">
         <a href="#present">無料プレゼント</a>
+        <a href="#manga">まんが</a>
         <a href="#works">作れるもの</a>
         <a href="#follow">フォローする</a>
         <a href="#apply">応募する</a>
