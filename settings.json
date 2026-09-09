@@ -1,0 +1,12 @@
+cat > /Users/ayuri/Documents/okan-lp/.claude/settings.json <<'EOF'
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(npm run build:*)"
+    ]
+  }
+}
+EOF
