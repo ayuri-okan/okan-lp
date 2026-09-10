@@ -1,3 +1,5 @@
+import { PageTabs } from '../components/PageTabs'
+
 export function Header() {
   return (
     <header className="topbar">
@@ -10,10 +12,10 @@ export function Header() {
         <a href="#present">無料プレゼント</a>
         <a href="#manga">まんが</a>
         <a href="#works">作れるもの</a>
-        <a href="/okanchi/">オカン。ち</a>
         <a href="#store">販売中の作品</a>
         <a href="#apply">応募する</a>
       </nav>
+      <PageTabs current="top" />
     </header>
   )
 }

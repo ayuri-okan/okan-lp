@@ -201,3 +201,26 @@
   border:2px solid var(--ink);border-radius:12px;background:#fff;margin-bottom:4px}
 .world-kicker{display:flex;align-items:center;gap:6px}
 .world-grid a{padding:14px 14px 18px}
+
+/* ============================================================
+   ページ切り替えタブ（スマホではこれが唯一のページ間移動手段）
+   ============================================================ */
+.topbar .page-tabs{display:flex;flex:0 0 auto;background:#fff;border:2px solid var(--ink);
+  border-radius:99px;padding:3px;box-shadow:3px 3px 0 var(--ink);margin-left:14px}
+.page-tabs a{display:block;padding:7px 14px;border-radius:99px;white-space:nowrap;
+  text-decoration:none;color:var(--muted);font:900 12px 'M PLUS Rounded 1c';
+  transition:background .15s,color .15s}
+.page-tabs a:hover{color:var(--ink)}
+.page-tabs a.is-current{background:var(--orange);color:#fff}
+
+@media(max-width:900px){
+  /* .topbar nav{display:none} がこのタブも隠してしまうので、明示的に出し直す */
+  .topbar .page-tabs{display:flex;margin-left:auto}
+}
+@media(max-width:560px){
+  .topbar .page-tabs{padding:2px;box-shadow:2px 2px 0 var(--ink)}
+  .page-tabs a{padding:6px 10px;font-size:11px}
+}
+@media(max-width:360px){
+  .page-tabs a{padding:5px 8px;font-size:10px}
+}

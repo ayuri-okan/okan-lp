@@ -2,6 +2,7 @@ import { familyMembers, okanchiGroupImage } from '../data/family'
 import { instagramHandle, instagramUrl } from '../data'
 import { ApplyButton, InstaButton } from '../components/Buttons'
 import { ArrowRight, Heart, InstagramIcon, Sparkles } from '../lib/icons'
+import { PageTabs } from '../components/PageTabs'
 
 export function OkanchiHeader() {
   return (
@@ -12,10 +13,10 @@ export function OkanchiHeader() {
         <span>家族の思い出作品室</span>
       </a>
       <nav aria-label="主要リンク">
-        <a href="/">トップへもどる</a>
         <a href="#family">家族しょうかい</a>
         <a href="/#present">無料プレゼント</a>
       </nav>
+      <PageTabs current="okanchi" />
     </header>
   )
 }
