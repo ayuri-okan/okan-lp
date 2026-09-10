@@ -1,12 +1,6 @@
+import { polaroids } from '../data'
 import { ApplyButton, InstaButton } from '../components/Buttons'
 import { ArrowDown, Gift } from '../lib/icons'
-
-const polaroids = [
-  ['🤣', 'こんな笑顔も'],
-  ['😴', 'この寝顔も'],
-  ['😎', '変なポーズも'],
-  ['👨‍👩‍👧‍👦', '家族で過ごした日も'],
-]
 
 export function Hero() {
   return (
@@ -31,8 +25,11 @@ export function Hero() {
         <img src="/img/okan-family.webp" alt="カメラを持ったオカン。と笑顔のムスコ" width="1000" height="1000" />
       </div>
       <div className="polaroids">
-        {polaroids.map(([emoji, label]) => (
-          <div key={label}>{emoji}<span>{label}</span></div>
+        {polaroids.map(p => (
+          <div key={p.label}>
+            <img src={p.src} alt={p.alt} width={460} height={460} loading="lazy" decoding="async" />
+            <span>{p.label}</span>
+          </div>
         ))}
       </div>
     </section>

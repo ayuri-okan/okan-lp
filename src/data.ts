@@ -61,13 +61,33 @@ export const gifts: Gift[] = [
 
 /* ---------- 各セクションのコンテンツ ---------- */
 
-export type Work = { accent: 'green' | 'orange' | 'blue' | 'pink'; emoji: string; name: string; text: string; demo: string }
+export type Work = {
+  accent: 'green' | 'orange' | 'blue' | 'pink'
+  emoji: string
+  name: string
+  text: string
+  /** 見本画像 */
+  demoSrc: string
+  demoAlt: string
+}
 
 export const works: Work[] = [
-  { accent: 'green', emoji: '💬', name: 'LINEスタンプ', text: '家族の会話で、毎日使える！', demo: 'おはよう！　だいすき！' },
-  { accent: 'orange', emoji: '🎨', name: 'イラスト', text: 'お気に入りの1枚を、かわいく作品に。', demo: 'PHOTO → ART' },
-  { accent: 'blue', emoji: '📖', name: 'マンガ', text: '家族のエピソードを、笑える1ページに。', demo: '「ママー！」' },
-  { accent: 'pink', emoji: '📚', name: '絵本', text: '今の気持ちを、未来の宝物に。', demo: 'ずっと だいすき' },
+  { accent: 'green', emoji: '💬', name: 'LINEスタンプ', text: '家族の会話で、毎日使える！',
+    demoSrc: '/works/stamp.webp', demoAlt: '「おはようさん」「おつかれさま」など、オカン。のLINEスタンプ4個' },
+  { accent: 'orange', emoji: '🎨', name: 'イラスト', text: 'お気に入りの1枚を、かわいく作品に。',
+    demoSrc: '/works/illust.webp', demoAlt: '木のフレームに入った、オカン。とムスコ。の思い出イラスト' },
+  { accent: 'blue', emoji: '📖', name: 'マンガ', text: '家族のエピソードを、笑える1ページに。',
+    demoSrc: '/works/manga.webp', demoAlt: 'ムスコ。が「これ ぼくやん」と飛び上がるマンガのひとコマ' },
+  { accent: 'pink', emoji: '📚', name: '絵本', text: '今の気持ちを、未来の宝物に。',
+    demoSrc: '/works/ehon.webp', demoAlt: '見開きいっぱいに草原を歩く親子が描かれたミニ絵本' },
+]
+
+/** ヒーロー下のポラロイド。読者のスマホの中の写真を表す */
+export const polaroids: { src: string; alt: string; label: string }[] = [
+  { src: '/moments/smile.webp', alt: '両手をあげて大笑いしている子ども', label: 'こんな笑顔も' },
+  { src: '/moments/sleep.webp', alt: 'うつ伏せで寝落ちしている子ども', label: 'この寝顔も' },
+  { src: '/moments/pose.webp', alt: 'トイレットペーパーを転がして得意げな子ども', label: '変なポーズも' },
+  { src: '/moments/family.webp', alt: 'オカン。ちの家族全員の集合写真', label: '家族で過ごした日も' },
 ]
 
 export type Step = { no: string; title: string; text: string; badge: string }

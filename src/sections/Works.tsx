@@ -12,7 +12,9 @@ export function Works() {
               <span>{w.emoji}</span>
               <div><h3>{w.name}</h3><p>{w.text}</p></div>
             </div>
-            <div className="work-demo">{w.demo}</div>
+            <div className="work-demo">
+              <img src={w.demoSrc} alt={w.demoAlt} width={520} height={520} loading="lazy" decoding="async" />
+            </div>
           </article>
         ))}
       </div>

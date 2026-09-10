@@ -117,3 +117,16 @@
   .manga-grid{grid-template-columns:1fr;max-width:520px;gap:26px}
   .manga-no{left:-6px;top:-6px;width:32px;height:32px;font-size:15px}
 }
+
+/* 「こんなん作れます」の見本画像 */
+.work-demo{height:auto;aspect-ratio:1/1;padding:10px;overflow:hidden}
+.work-demo img{display:block;width:100%;height:100%;object-fit:contain;border-radius:10px}
+
+/* ヒーロー下のポラロイド。絵文字から画像に差し替えたので、
+   画像が残りの高さを埋めてラベルを下に残す形にする */
+.polaroids div{padding:10px 8px 8px;justify-content:flex-start;gap:0}
+.polaroids img{display:block;width:100%;flex:1 1 auto;min-height:0;
+  object-fit:contain;border-radius:4px;background:#faf3e9}
+.polaroids span{flex:0 0 auto;margin-top:8px}
+@media(max-width:900px){ .polaroids div{padding:8px 6px 6px} }
+@media(max-width:560px){ .polaroids div{padding:6px 4px 5px} .polaroids span{margin-top:4px} }
