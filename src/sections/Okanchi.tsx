@@ -53,26 +53,41 @@ export function FamilyList() {
       <div className="family-grid">
         {familyMembers.map(m => (
           <article className={`family-card ${m.accent}`} key={m.id}>
-            <div className="family-art">
-              <img src={m.src} alt={`${m.name}の立ち姿`} width={520} height={520} loading="lazy" decoding="async" />
-              <span className="family-role">{m.role}</span>
+            <div className="family-top">
+              <div className="family-art">
+                <img src={m.src} alt={`${m.name}の立ち姿`} width={520} height={520} loading="lazy" decoding="async" />
+              </div>
+              <div className="family-name">
+                <span className="family-role">{m.role}</span>
+                <h3>{m.name}</h3>
+                <p className="family-catch">{m.catch}</p>
+              </div>
             </div>
-            <div className="family-body">
-              <h3>{m.name}</h3>
-              <p className="family-catch">{m.catch}</p>
 
-              <dl className="family-spec">
-                <div><dt>性格</dt><dd>{m.personality.join('・')}</dd></div>
-                <div><dt>好き</dt><dd>{m.likes.join('・')}</dd></div>
-                <div><dt>苦手</dt><dd>{m.dislikes.join('・')}</dd></div>
-              </dl>
+            <dl className="family-spec">
+              <div><dt>性格</dt><dd>{m.personality.join('・')}</dd></div>
+              <div><dt>好き</dt><dd>{m.likes.join('・')}</dd></div>
+              <div><dt>苦手</dt><dd>{m.dislikes.join('・')}</dd></div>
+            </dl>
 
-              <ul className="family-phrases">
-                {m.phrases.slice(0, 2).map(p => <li key={p}>「{p}」</li>)}
-              </ul>
+            <ul className="family-phrases">
+              {m.phrases.slice(0, 2).map(p => <li key={p}>「{p}」</li>)}
+            </ul>
 
-              <p className="family-duty">{m.duty}</p>
-            </div>
+            <p className="family-duty">{m.duty}</p>
+
+            {m.manga ? (
+              <figure className="family-manga">
+                <img src={m.manga.src} alt={m.manga.alt} width={896} height={1200} loading="lazy" decoding="async" />
+                <figcaption>オカン。と{m.name}の、ある日</figcaption>
+              </figure>
+            ) : (
+              /* オカン。は全話に出るので専用の漫画を持たない。空白になるので一言を置く */
+              <p className="family-note">
+                <Heart />
+                オカン。は、ほかのみんなの話に<br />ぜんぶ出てきます。
+              </p>
+            )}
           </article>
         ))}
       </div>

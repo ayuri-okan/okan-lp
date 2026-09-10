@@ -22,6 +22,8 @@ export type FamilyMember = {
   src: string
   /** カードのアクセント色 */
   accent: 'orange' | 'green' | 'pink' | 'yellow' | 'purple' | 'blue'
+  /** カードに埋め込む2コマ漫画。オカン。は全話に出るので持たない */
+  manga?: { src: string; alt: string }
 }
 
 export const familyMembers: FamilyMember[] = [
@@ -50,6 +52,7 @@ export const familyMembers: FamilyMember[] = [
     duty: '家族のゆるい支え役。でも、いざという時は頼りになる。',
     src: '/family/oton.webp',
     accent: 'green',
+    manga: { src: '/family-manga/oton.webp', alt: '洗濯物を抱えたオカン。が手伝いを頼むと、オトン。が「ま なんとか なるやろ」と親指を立てる2コマ漫画' },
   },
   {
     id: 'musuko-big',
@@ -63,6 +66,7 @@ export const familyMembers: FamilyMember[] = [
     duty: '家族のムードメーカー。オカンに怒られがちだけど、みんなに愛されるやんちゃ坊主。',
     src: '/family/musuko-big.webp',
     accent: 'blue',
+    manga: { src: '/family-manga/musuko.webp', alt: 'オカン。に宿題を聞かれたムスコ。が「あとで やる たぶん」と目をそらす2コマ漫画' },
   },
   {
     id: 'musume',
@@ -76,6 +80,7 @@ export const familyMembers: FamilyMember[] = [
     duty: '家族のアイドル。オカンの味方でみんなを癒す存在。',
     src: '/family/musume.webp',
     accent: 'pink',
+    manga: { src: '/family-manga/musume.webp', alt: 'ムスメ。がリボンを見せて「かわいくない」と聞き、オカン。に褒められて得意げになる2コマ漫画' },
   },
   {
     id: 'musuko-kid',
@@ -90,6 +95,7 @@ export const familyMembers: FamilyMember[] = [
     duty: '家族のムードメーカー。やんちゃでみんなを笑顔にする愛されキャラ。',
     src: '/family/musuko-kid.webp',
     accent: 'yellow',
+    manga: { src: '/family-manga/musuko-kid.webp', alt: 'お風呂に誘われたムスコ。（弟）が「いやや」とオカン。の脚にしがみつく2コマ漫画' },
   },
   {
     id: 'akago',
@@ -103,6 +109,7 @@ export const familyMembers: FamilyMember[] = [
     duty: 'みんなを癒す存在。家族のアイドル。泣いても笑ってもかわいい。',
     src: '/family/akago.webp',
     accent: 'yellow',
+    manga: { src: '/family-manga/akago.webp', alt: 'ハイハイで近づいてきたアカゴ。が満面の笑みで両手を上げ、オカン。がとろける2コマ漫画' },
   },
   {
     id: 'ojii',
@@ -116,6 +123,7 @@ export const familyMembers: FamilyMember[] = [
     duty: '家族の癒し・相談役。時々、名言やダジャレでみんなを笑わせる。',
     src: '/family/ojii.webp',
     accent: 'green',
+    manga: { src: '/family-manga/ojii.webp', alt: 'オジイ。の昔話にオカン。が「その話 三回目やで」と苦笑いする2コマ漫画' },
   },
   {
     id: 'obaa',
@@ -129,6 +137,7 @@ export const familyMembers: FamilyMember[] = [
     duty: '家族の癒し・知恵袋。オカンの良き相談相手で、ときどき突っ込み役。',
     src: '/family/obaa.webp',
     accent: 'purple',
+    manga: { src: '/family-manga/obaa.webp', alt: 'ぐったりしたオカン。に、オバア。が黙っておにぎりを差し出す2コマ漫画' },
   },
   {
     id: 'inu',
@@ -142,6 +151,7 @@ export const familyMembers: FamilyMember[] = [
     duty: '家族の癒し担当。いつもみんなのそばにいて、笑顔を増やすムードメーカー。',
     src: '/family/inu.webp',
     accent: 'orange',
+    manga: { src: '/family-manga/inu.webp', alt: '料理中のオカン。の足元で、イヌ。がしっぽを振って見上げつづける2コマ漫画' },
   },
   {
     id: 'neko',
@@ -155,6 +165,7 @@ export const familyMembers: FamilyMember[] = [
     duty: '家族をそっと見守る癒し担当。時々ツッコミ役。オカン家のマスコット。',
     src: '/family/neko.webp',
     accent: 'blue',
+    manga: { src: '/family-manga/neko.webp', alt: 'オカン。が手をのばすとネコ。はそっぽを向き、しっぽの先だけが触れている2コマ漫画' },
   },
 ]
 
