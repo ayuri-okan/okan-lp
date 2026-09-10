@@ -10,6 +10,7 @@ import { Follow } from './sections/Follow'
 import { Store } from './sections/Store'
 import { Faq } from './sections/Faq'
 import { Apply } from './sections/Apply'
+import { World } from './sections/World'
 import { Footer, MobileBar } from './sections/Footer'
 
 export default function App() {
@@ -29,6 +30,7 @@ export default function App() {
         <Store />
         <Faq />
         <Apply />
+        <World />
       </main>
       <Footer />
       <MobileBar />

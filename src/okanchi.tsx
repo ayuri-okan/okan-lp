@@ -5,6 +5,7 @@ import './responsive.css'
 import './form.css'
 import './okanchi.css'
 import { OkanchiHeader, OkanchiHero, FamilyList, OkanchiOutro, OkanchiFooter } from './sections/Okanchi'
+import { World } from './sections/World'
 
 function Okanchi() {
   return (
@@ -15,6 +16,7 @@ function Okanchi() {
         <OkanchiHero />
         <FamilyList />
         <OkanchiOutro />
+        <World />
       </main>
       <OkanchiFooter />
     </>

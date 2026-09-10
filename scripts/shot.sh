@@ -10,7 +10,7 @@ URL="${1:-http://127.0.0.1:5173/}"
 OUT="$(cd "$(dirname "$0")/.." && pwd)/shots"
 mkdir -p "$OUT"
 "$CHROME" --headless --disable-gpu --hide-scrollbars --virtual-time-budget=9000 \
-  --window-size=1280,10000 --screenshot="$OUT/desktop.png" "$URL" 2>/dev/null
+  --window-size=1280,15000 --screenshot="$OUT/desktop.png" "$URL" 2>/dev/null
 "$CHROME" --headless --disable-gpu --hide-scrollbars --virtual-time-budget=9000 \
-  --window-size=500,17000 --screenshot="$OUT/mobile.png" "$URL" 2>/dev/null
+  --window-size=500,24000 --screenshot="$OUT/mobile.png" "$URL" 2>/dev/null
 echo "→ $OUT/desktop.png / $OUT/mobile.png"

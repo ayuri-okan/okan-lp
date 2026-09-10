@@ -146,6 +146,53 @@ export const storeItems: StoreItem[] = [
 export const storeItemUrl = (id: string) => `https://store.line.me/stickershop/product/${id}/ja`
 export const storeItemImage = (id: string) => `/store/${id}.webp`
 
+/* ---------- オカン。の世界のつづき ---------- */
+
+export type WorldLink = {
+  id: string
+  kicker: string
+  title: string
+  text: string
+  url: string
+  emoji: string
+}
+
+/**
+ * 本人が運営している他サイトへの導線。
+ * 無料プレゼントの導線と競合しないよう、応募フォームより後ろに置く。
+ */
+export const worldLinks: WorldLink[] = [
+  {
+    id: 'toybox',
+    kicker: "OKAN'S TOY BOX",
+    title: 'オカンのおもちゃ箱',
+    text: 'オカン。がどうして作品を作りはじめたのか。12ページの漫画になっています。3分で読めます。',
+    url: 'https://okan-toybox-lp.vercel.app/',
+    emoji: '🧰',
+  },
+  {
+    id: 'ayu',
+    kicker: 'MEET THE CREATOR',
+    title: '作者・あゆの物語',
+    text: 'オカン。を生んで育てている人のこと。ここまで来てくれたなら、ぜひ。',
+    url: 'https://ayu-lp.vercel.app/',
+    emoji: '🎨',
+  },
+  {
+    id: 'palette',
+    kicker: 'STAMP PALETTE',
+    title: '作品ギャラリー',
+    text: 'あゆの作品も、ほかのクリエイターの作品も並ぶ展示室。自分の作品を出すこともできます。',
+    url: 'https://stamp-palette.vercel.app/',
+    emoji: '🖼️',
+  },
+]
+
+/** 世界の全体案内（公式サイト） */
+export const charaParkUrl = 'https://chara-park.pages.dev/'
+/** キャラづくりを学ぶ場所 */
+export const gakuenUrl = 'https://charapale-gakuen.vercel.app/'
+
 export type Faq = { q: string; a: string }
 
 export const faqs: Faq[] = [
