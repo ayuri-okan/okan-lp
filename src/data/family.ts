@@ -22,8 +22,10 @@ export type FamilyMember = {
   src: string
   /** カードのアクセント色 */
   accent: 'orange' | 'green' | 'pink' | 'yellow' | 'purple' | 'blue'
-  /** カードに埋め込む2コマ漫画。オカン。は全話に出るので持たない */
+  /** カードに埋め込む2コマ漫画 */
   manga?: { src: string; alt: string }
+  /** オカン。のカードだけに置く家族の集合絵 */
+  groupPhoto?: { src: string; alt: string }
 }
 
 export const familyMembers: FamilyMember[] = [
@@ -39,6 +41,14 @@ export const familyMembers: FamilyMember[] = [
     duty: '家族のまとめ役。ごはんと笑顔でみんなを元気にする最強のオカン。',
     src: '/family/okan.webp',
     accent: 'orange',
+    groupPhoto: {
+      src: '/family/okanchi-group.webp',
+      alt: 'オカン。ちの看板の前に集まった家族全員。オトン。オカン。ムスコ。ムスメ。アカゴ。オジイ。オバア。イヌ。ネコ。',
+    },
+    manga: {
+      src: '/family-manga/okan.webp',
+      alt: 'オカン。が玄関の扉を開けて「ようこそ オカン。ちへ」と迎え、家族のアフロのシルエットを背に「うちの家族 紹介するわ」「ぜんいん アフロやで」と笑う2コマ漫画',
+    },
   },
   {
     id: 'oton',

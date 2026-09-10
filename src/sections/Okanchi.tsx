@@ -76,6 +76,13 @@ export function FamilyList() {
 
             <p className="family-duty">{m.duty}</p>
 
+            {m.groupPhoto && (
+              <figure className="family-group">
+                <img src={m.groupPhoto.src} alt={m.groupPhoto.alt} width={1100} height={1100} loading="lazy" decoding="async" />
+                <figcaption>オカン。ちの、みんな</figcaption>
+              </figure>
+            )}
+
             {m.manga ? (
               <figure className="family-manga">
                 <img src={m.manga.src} alt={m.manga.alt} width={896} height={1200} loading="lazy" decoding="async" />
