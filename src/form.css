@@ -195,3 +195,9 @@
 .store-reroll:hover{transform:translate(-1px,-1px);box-shadow:5px 6px 0 var(--ink);color:var(--orange)}
 .store-reroll:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
 .store-reroll svg{width:17px;height:17px}
+
+/* 回遊カードのサムネイル(リンク先ページの実物) */
+.world-thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;
+  border:2px solid var(--ink);border-radius:12px;background:#fff;margin-bottom:4px}
+.world-kicker{display:flex;align-items:center;gap:6px}
+.world-grid a{padding:14px 14px 18px}

@@ -191,6 +191,9 @@ export type WorldLink = {
   text: string
   url: string
   emoji: string
+  /** リンク先ページのサムネイル */
+  thumb: string
+  thumbAlt: string
 }
 
 /**
@@ -205,14 +208,18 @@ export const worldLinks: WorldLink[] = [
     text: 'オカン。がどうして作品を作りはじめたのか。12ページの漫画になっています。3分で読めます。',
     url: 'https://okan-toybox-lp.vercel.app/',
     emoji: '🧰',
+    thumb: '/world/toybox.webp',
+    thumbAlt: '「オカンのおもちゃ箱」のページ。ふたを開けたら、なかみが動きだした。',
   },
   {
     id: 'ayu',
     kicker: 'MEET THE CREATOR',
     title: '作者・あゆの物語',
-    text: 'オカン。を生んで育てている人のこと。ここまで来てくれたなら、ぜひ。',
+    text: '「オカン。」をやめた夜の話。15ページの漫画になっています。オカン。を生んで育てている人のことが分かります。',
     url: 'https://ayu-lp.vercel.app/',
     emoji: '🎨',
+    thumb: '/world/ayu.webp',
+    thumbAlt: '「『オカン。』をやめます。」と題された作者・あゆのページ',
   },
   {
     id: 'palette',
@@ -221,6 +228,8 @@ export const worldLinks: WorldLink[] = [
     text: 'あゆの作品も、ほかのクリエイターの作品も並ぶ展示室。自分の作品を出すこともできます。',
     url: 'https://stamp-palette.vercel.app/',
     emoji: '🖼️',
+    thumb: '/world/palette.webp',
+    thumbAlt: 'STAMP PALETTE のキービジュアル。オカン。たちがスタンプのカードを持っている',
   },
 ]
 

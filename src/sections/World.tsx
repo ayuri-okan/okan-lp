@@ -12,8 +12,9 @@ export function World() {
         {worldLinks.map(w => (
           <li key={w.id}>
             <a href={w.url} target="_blank" rel="noopener noreferrer">
-              <span className="world-emoji" aria-hidden="true">{w.emoji}</span>
-              <span className="world-kicker">{w.kicker}</span>
+              <img className="world-thumb" src={w.thumb} alt={w.thumbAlt}
+                   width={720} height={405} loading="lazy" decoding="async" />
+              <span className="world-kicker"><span aria-hidden="true">{w.emoji}</span>{w.kicker}</span>
               <b>{w.title}</b>
               <p>{w.text}</p>
               <span className="world-go">見にいく <ArrowRight /></span>
