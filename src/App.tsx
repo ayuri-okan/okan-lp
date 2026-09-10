@@ -7,6 +7,7 @@ import { Present } from './sections/Present'
 import { Flow } from './sections/Flow'
 import { Moments } from './sections/Moments'
 import { Follow } from './sections/Follow'
+import { Store } from './sections/Store'
 import { Faq } from './sections/Faq'
 import { Apply } from './sections/Apply'
 import { Footer, MobileBar } from './sections/Footer'
@@ -25,6 +26,7 @@ export default function App() {
         <Flow />
         <Moments />
         <Follow />
+        <Store />
         <Faq />
         <Apply />
       </main>

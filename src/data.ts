@@ -121,6 +121,31 @@ export const mangaPages: MangaPage[] = [
   { no: 5, src: '/manga/page05.webp', alt: 'オカン。とムスコが下を指さし、緑の立て札に「LINEで まってるで」。ムスコが「ここ おしてやー」と言う' },
 ]
 
+/* ---------- 販売中の作品 ---------- */
+
+/** LINE STORE のクリエイターページ（全49作品） */
+export const lineStoreAuthorUrl = 'https://store.line.me/stickershop/author/3948032/ja'
+
+/** 作品ギャラリー（ポートフォリオ） */
+export const portfolioUrl = 'https://stamp-palette.vercel.app/'
+
+export type StoreItem = { id: string; name: string; note: string }
+
+/** LPに並べる代表作。サムネイルは公式ストアのものを取り込んで public/store/ に置いている */
+export const storeItems: StoreItem[] = [
+  { id: '36404994', name: 'オカン。とムスコ。関西弁の親子', note: '親子の会話がそのまま使える' },
+  { id: '36440804', name: 'オカン。とムスコ。ともちぴ。', note: 'もちぴも仲間入りした3人セット' },
+  { id: '36391279', name: 'あゆとオカン。全国いくで', note: '作者・あゆとオカン。の2人旅' },
+  { id: '36390622', name: 'オカン。毎日使える関西弁スタンプ', note: 'まずはこれ。朝から夜までの定番' },
+  { id: '36404915', name: '無言でも圧が強いオカン。', note: '何も言うてへんのに圧がすごい' },
+  { id: '36391210', name: '褒めまくるオカン。', note: 'とにかく褒める。元気が出るやつ' },
+  { id: '36329224', name: 'オカン。受験生を応援するスタンプ', note: '受験の時期に効くシリーズ' },
+  { id: '36440710', name: '二日酔いをいたわるオカン。', note: '飲みすぎた朝に届くやさしさ' },
+]
+
+export const storeItemUrl = (id: string) => `https://store.line.me/stickershop/product/${id}/ja`
+export const storeItemImage = (id: string) => `/store/${id}.webp`
+
 export type Faq = { q: string; a: string }
 
 export const faqs: Faq[] = [

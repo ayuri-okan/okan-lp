@@ -11,7 +11,7 @@ export function Header() {
         <a href="#manga">まんが</a>
         <a href="#works">作れるもの</a>
         <a href="/okanchi/">オカン。ち</a>
-        <a href="#follow">フォローする</a>
+        <a href="#store">販売中の作品</a>
         <a href="#apply">応募する</a>
       </nav>
     </header>
