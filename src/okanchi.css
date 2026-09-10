@@ -23,7 +23,9 @@
 .family-card:hover{transform:translate(-2px,-2px);box-shadow:9px 10px 0 var(--ink)}
 
 .family-top{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center}
-.family-art{width:150px;height:150px;background:#fdf7ee;border-radius:14px;overflow:hidden}
+/* 図が枠いっぱいまで来て角丸に食われるので、内側に余白を作る */
+.family-art{width:150px;height:150px;background:#fdf7ee;border-radius:14px;
+  padding:12px;display:grid;place-items:center;overflow:hidden}
 .family-art img{display:block;width:100%;height:100%;object-fit:contain}
 .family-name{min-width:0}
 .family-role{display:inline-block;background:var(--ink);color:#fff;border-radius:99px;
@@ -79,7 +81,7 @@ footer a svg{width:18px;height:18px;flex:0 0 auto}
   font-weight:700;color:var(--muted)}
 @media(max-width:520px){
   .family-top{grid-template-columns:110px 1fr;gap:12px}
-  .family-art{width:110px;height:110px}
+  .family-art{width:110px;height:110px;padding:8px}
   .family-name h3{font-size:21px}
 }
 
