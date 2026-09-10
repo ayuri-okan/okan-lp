@@ -186,3 +186,12 @@
 .world-more span{opacity:.5}
 
 @media(max-width:900px){ .world-grid{grid-template-columns:1fr;max-width:520px} }
+
+/* 「ほかの作品も見る」で並びを引き直すボタン */
+.store-reroll{display:inline-flex;align-items:center;gap:8px;margin:0 0 26px;cursor:pointer;
+  background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:99px;
+  padding:11px 22px;font:900 13px 'M PLUS Rounded 1c';box-shadow:3px 4px 0 var(--ink);
+  transition:transform .15s,box-shadow .15s}
+.store-reroll:hover{transform:translate(-1px,-1px);box-shadow:5px 6px 0 var(--ink);color:var(--orange)}
+.store-reroll:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.store-reroll svg{width:17px;height:17px}

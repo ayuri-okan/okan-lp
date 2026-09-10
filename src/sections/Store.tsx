@@ -1,18 +1,26 @@
-import { storeItems, storeItemUrl, storeItemImage, lineStoreAuthorUrl, portfolioUrl } from '../data'
+import { useMemo, useState } from 'react'
+import {
+  pickStoreItems, storeItemUrl, storeItemImage,
+  lineStoreAuthorUrl, portfolioUrl, storeTotalCount,
+} from '../data'
 import { ArrowRight, Sparkles } from '../lib/icons'
 
 export function Store() {
+  // 表示のたびに顔ぶれが変わる。seed を進めると「他のも見る」で引き直せる
+  const [seed, setSeed] = useState(0)
+  const items = useMemo(() => pickStoreItems(8), [seed])
+
   return (
     <section className="store section" id="store">
       <div className="kicker">ON SALE NOW</div>
       <h2>オカン。は、<br /><em>もう売ってます。</em></h2>
       <p className="lead">
-        LINEスタンプはぜんぶで49作品。<br />
+        LINEスタンプはぜんぶで{storeTotalCount}作品。<br />
         今日から、あなたのトークでオカン。が喋りだします。
       </p>
 
       <ul className="store-grid">
-        {storeItems.map(item => (
+        {items.map(item => (
           <li key={item.id}>
             <a href={storeItemUrl(item.id)} target="_blank" rel="noopener noreferrer">
               <img
@@ -30,9 +38,13 @@ export function Store() {
         ))}
       </ul>
 
+      <button className="store-reroll" type="button" onClick={() => setSeed(s => s + 1)}>
+        <Sparkles />ほかの作品も見る
+      </button>
+
       <div className="store-links">
         <a className="store-btn primary" href={lineStoreAuthorUrl} target="_blank" rel="noopener noreferrer">
-          <span><small>LINE STORE・全49作品</small>スタンプを全部見る</span>
+          <span><small>LINE STORE・全{storeTotalCount}作品</small>スタンプを全部見る</span>
           <ArrowRight />
         </a>
         <a className="store-btn" href={portfolioUrl} target="_blank" rel="noopener noreferrer">
