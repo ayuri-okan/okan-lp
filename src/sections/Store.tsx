@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import {
   pickStoreItems, storeItemUrl, storeItemImage,
-  lineStoreAuthorUrl, portfolioUrl, storeTotalCount,
+  lineStoreAuthorUrl, portfolioUrl,
 } from '../data'
 import { ArrowRight, Sparkles } from '../lib/icons'
 
@@ -15,7 +15,7 @@ export function Store() {
       <div className="kicker">ON SALE NOW</div>
       <h2>オカン。は、<br /><em>もう売ってます。</em></h2>
       <p className="lead">
-        LINEスタンプはぜんぶで{storeTotalCount}作品。<br />
+        朝のあいさつから、飲みすぎた翌朝まで。<br />
         今日から、あなたのトークでオカン。が喋りだします。
       </p>
 
@@ -44,7 +44,7 @@ export function Store() {
 
       <div className="store-links">
         <a className="store-btn primary" href={lineStoreAuthorUrl} target="_blank" rel="noopener noreferrer">
-          <span><small>LINE STORE・全{storeTotalCount}作品</small>スタンプを全部見る</span>
+          <span><small>LINE STORE</small>スタンプを全部見る</span>
           <ArrowRight />
         </a>
         <a className="store-btn" href={portfolioUrl} target="_blank" rel="noopener noreferrer">

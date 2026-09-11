@@ -123,7 +123,7 @@ export const mangaPages: MangaPage[] = [
 
 /* ---------- 販売中の作品 ---------- */
 
-/** LINE STORE のクリエイターページ（全49作品） */
+/** LINE STORE のクリエイターページ（作品数はLINE側が最新を出すので、こちらには書かない） */
 export const lineStoreAuthorUrl = 'https://store.line.me/stickershop/author/3948032/ja'
 
 /** 作品ギャラリー（ポートフォリオ） */
@@ -165,9 +165,6 @@ export const storeItems: StoreItem[] = [
   { id: '36329260', name: '一人暮らしの子供に送るオカン。', note: '離れて暮らす子へ送るやつ' },
   { id: '36309051', name: 'オカン。やさしい敬語スタンプ', note: '目上の人にも使える敬語版' },
 ]
-
-/** ストアの総作品数(クリエイターページの実数) */
-export const storeTotalCount = 49
 
 /** 表示のたびに違う顔ぶれになるよう、その場でシャッフルして先頭n件を返す */
 export function pickStoreItems(n = 8): StoreItem[] {
